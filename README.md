@@ -6,11 +6,14 @@
 
 ## Основной технологический стек
 
-- **Фронтенд:** React (Next.js 14, App Router), TypeScript, Tailwind CSS, Zustand, React Hook Form  
+- **Фронтенд:** React, TypeScript, Tailwind CSS, Zustand, React Hook Form  
 - **Бэкенд:** NestJS, TypeScript, Postgres, TypeORM  
-- **API и запросы:** TanStack Query, Axios  
+- **API и запросы:** TanStack Query, fetch, heyapi
 - **Аутентификация:** OAuth (Google), JWT  
 - **Утилиты:** Zod для валидации, Prettier, ESLint, Husky  
+- **Роутинг:** Tanstack-router (file based)
+- **Архитектура:** FSD, Atomic
+- **UI:** shadcn
 - **Дополнительно:** GSAP для анимаций, Radix UI для компонентов, Socket.IO (для будущих фич чата)
 
 ---
