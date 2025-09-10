@@ -1,6 +1,6 @@
-import { AuthForm } from '@/shared/ui/organism/AuthForms'
 import { useRegisterForm } from '@/features/auth/ui/hooks/useRegisterForm'
 import { registerFields } from '@/shared/types/types.ts'
+import {AuthForm} from "@/features/auth";
 
 export function RegisterForm() {
   const { form, onSubmit, isLoading } = useRegisterForm()

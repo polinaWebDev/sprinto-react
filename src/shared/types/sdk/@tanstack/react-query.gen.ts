@@ -12,6 +12,11 @@ import {
   usersControllerRemove,
   usersControllerFindOne,
   usersControllerUpdate,
+  workspaceControllerFindAll,
+  workspaceControllerCreate,
+  workspaceControllerRemove,
+  workspaceControllerFindOne,
+  workspaceControllerUpdate,
 } from '../sdk.gen'
 import {
   type UseMutationOptions,
@@ -31,6 +36,11 @@ import type {
   UsersControllerRemoveData,
   UsersControllerFindOneData,
   UsersControllerUpdateData,
+  WorkspaceControllerFindAllData,
+  WorkspaceControllerCreateData,
+  WorkspaceControllerRemoveData,
+  WorkspaceControllerFindOneData,
+  WorkspaceControllerUpdateData,
 } from '../types.gen'
 import { client as _heyApiClient } from '../client.gen'
 
@@ -290,6 +300,120 @@ export const usersControllerUpdateMutation = (
   > = {
     mutationFn: async (fnOptions) => {
       const { data } = await usersControllerUpdate({
+        ...options,
+        ...fnOptions,
+        throwOnError: true,
+      })
+      return data
+    },
+  }
+  return mutationOptions
+}
+
+export const workspaceControllerFindAllQueryKey = (
+  options?: Options<WorkspaceControllerFindAllData>,
+) => createQueryKey('workspaceControllerFindAll', options)
+
+export const workspaceControllerFindAllOptions = (
+  options?: Options<WorkspaceControllerFindAllData>,
+) => {
+  return queryOptions({
+    queryFn: async ({ queryKey, signal }) => {
+      const { data } = await workspaceControllerFindAll({
+        ...options,
+        ...queryKey[0],
+        signal,
+        throwOnError: true,
+      })
+      return data
+    },
+    queryKey: workspaceControllerFindAllQueryKey(options),
+  })
+}
+
+export const workspaceControllerCreateMutation = (
+  options?: Partial<Options<WorkspaceControllerCreateData>>,
+): UseMutationOptions<
+  unknown,
+  DefaultError,
+  Options<WorkspaceControllerCreateData>
+> => {
+  const mutationOptions: UseMutationOptions<
+    unknown,
+    DefaultError,
+    Options<WorkspaceControllerCreateData>
+  > = {
+    mutationFn: async (fnOptions) => {
+      const { data } = await workspaceControllerCreate({
+        ...options,
+        ...fnOptions,
+        throwOnError: true,
+      })
+      return data
+    },
+  }
+  return mutationOptions
+}
+
+export const workspaceControllerRemoveMutation = (
+  options?: Partial<Options<WorkspaceControllerRemoveData>>,
+): UseMutationOptions<
+  unknown,
+  DefaultError,
+  Options<WorkspaceControllerRemoveData>
+> => {
+  const mutationOptions: UseMutationOptions<
+    unknown,
+    DefaultError,
+    Options<WorkspaceControllerRemoveData>
+  > = {
+    mutationFn: async (fnOptions) => {
+      const { data } = await workspaceControllerRemove({
+        ...options,
+        ...fnOptions,
+        throwOnError: true,
+      })
+      return data
+    },
+  }
+  return mutationOptions
+}
+
+export const workspaceControllerFindOneQueryKey = (
+  options: Options<WorkspaceControllerFindOneData>,
+) => createQueryKey('workspaceControllerFindOne', options)
+
+export const workspaceControllerFindOneOptions = (
+  options: Options<WorkspaceControllerFindOneData>,
+) => {
+  return queryOptions({
+    queryFn: async ({ queryKey, signal }) => {
+      const { data } = await workspaceControllerFindOne({
+        ...options,
+        ...queryKey[0],
+        signal,
+        throwOnError: true,
+      })
+      return data
+    },
+    queryKey: workspaceControllerFindOneQueryKey(options),
+  })
+}
+
+export const workspaceControllerUpdateMutation = (
+  options?: Partial<Options<WorkspaceControllerUpdateData>>,
+): UseMutationOptions<
+  unknown,
+  DefaultError,
+  Options<WorkspaceControllerUpdateData>
+> => {
+  const mutationOptions: UseMutationOptions<
+    unknown,
+    DefaultError,
+    Options<WorkspaceControllerUpdateData>
+  > = {
+    mutationFn: async (fnOptions) => {
+      const { data } = await workspaceControllerUpdate({
         ...options,
         ...fnOptions,
         throwOnError: true,

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { transformUserResponse } from '@/entities/user/model/transformers.ts'
-import { authControllerGetMeOptions } from '@/features/auth/api'
+import { authControllerGetMeOptions } from '@/shared/types/sdk/@tanstack/react-query.gen.ts'
 
 export const useUser = () => {
   const userQuery = useQuery({

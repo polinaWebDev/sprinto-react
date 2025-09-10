@@ -22,6 +22,16 @@ import type {
   UsersControllerFindOneResponses,
   UsersControllerUpdateData,
   UsersControllerUpdateResponses,
+  WorkspaceControllerFindAllData,
+  WorkspaceControllerFindAllResponses,
+  WorkspaceControllerCreateData,
+  WorkspaceControllerCreateResponses,
+  WorkspaceControllerRemoveData,
+  WorkspaceControllerRemoveResponses,
+  WorkspaceControllerFindOneData,
+  WorkspaceControllerFindOneResponses,
+  WorkspaceControllerUpdateData,
+  WorkspaceControllerUpdateResponses,
 } from './types.gen'
 import { client as _heyApiClient } from './client.gen'
 
@@ -189,6 +199,83 @@ export const usersControllerUpdate = <ThrowOnError extends boolean = false>(
     ThrowOnError
   >({
     url: '/users/{id}',
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+  })
+}
+
+export const workspaceControllerFindAll = <
+  ThrowOnError extends boolean = false,
+>(
+  options?: Options<WorkspaceControllerFindAllData, ThrowOnError>,
+) => {
+  return (options?.client ?? _heyApiClient).get<
+    WorkspaceControllerFindAllResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: '/workspace',
+    ...options,
+  })
+}
+
+export const workspaceControllerCreate = <ThrowOnError extends boolean = false>(
+  options: Options<WorkspaceControllerCreateData, ThrowOnError>,
+) => {
+  return (options.client ?? _heyApiClient).post<
+    WorkspaceControllerCreateResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: '/workspace',
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+  })
+}
+
+export const workspaceControllerRemove = <ThrowOnError extends boolean = false>(
+  options: Options<WorkspaceControllerRemoveData, ThrowOnError>,
+) => {
+  return (options.client ?? _heyApiClient).delete<
+    WorkspaceControllerRemoveResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: '/workspace/{id}',
+    ...options,
+  })
+}
+
+export const workspaceControllerFindOne = <
+  ThrowOnError extends boolean = false,
+>(
+  options: Options<WorkspaceControllerFindOneData, ThrowOnError>,
+) => {
+  return (options.client ?? _heyApiClient).get<
+    WorkspaceControllerFindOneResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: '/workspace/{id}',
+    ...options,
+  })
+}
+
+export const workspaceControllerUpdate = <ThrowOnError extends boolean = false>(
+  options: Options<WorkspaceControllerUpdateData, ThrowOnError>,
+) => {
+  return (options.client ?? _heyApiClient).patch<
+    WorkspaceControllerUpdateResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: '/workspace/{id}',
     ...options,
     headers: {
       'Content-Type': 'application/json',

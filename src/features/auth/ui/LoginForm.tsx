@@ -1,6 +1,6 @@
 import { useLoginForm } from '@/features/auth/ui/hooks/useLoginForm'
 import { loginFields } from '@/shared/types/types.ts'
-import { AuthForm } from '@/shared/ui/organism/AuthForms.tsx'
+import {AuthForm} from "@/features/auth";
 
 export function LoginForm() {
   const { form, onSubmit, isLoading } = useLoginForm()

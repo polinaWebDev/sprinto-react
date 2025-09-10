@@ -28,6 +28,12 @@ export const zUserRequestDto = z.object({
   password: z.string(),
 })
 
+export const zCreateWorkspaceDto = z.object({
+  name: z.string(),
+})
+
+export const zUpdateWorkspaceDto = z.record(z.string(), z.unknown())
+
 export const zAuthControllerRegisterData = z.object({
   body: zRegisterDto,
   path: z.optional(z.never()),
@@ -99,6 +105,42 @@ export const zUsersControllerFindOneData = z.object({
 
 export const zUsersControllerUpdateData = z.object({
   body: zUserRequestDto,
+  path: z.object({
+    id: z.number(),
+  }),
+  query: z.optional(z.never()),
+})
+
+export const zWorkspaceControllerFindAllData = z.object({
+  body: z.optional(z.never()),
+  path: z.optional(z.never()),
+  query: z.optional(z.never()),
+})
+
+export const zWorkspaceControllerCreateData = z.object({
+  body: zCreateWorkspaceDto,
+  path: z.optional(z.never()),
+  query: z.optional(z.never()),
+})
+
+export const zWorkspaceControllerRemoveData = z.object({
+  body: z.optional(z.never()),
+  path: z.object({
+    id: z.number(),
+  }),
+  query: z.optional(z.never()),
+})
+
+export const zWorkspaceControllerFindOneData = z.object({
+  body: z.optional(z.never()),
+  path: z.object({
+    id: z.number(),
+  }),
+  query: z.optional(z.never()),
+})
+
+export const zWorkspaceControllerUpdateData = z.object({
+  body: zUpdateWorkspaceDto,
   path: z.object({
     id: z.number(),
   }),

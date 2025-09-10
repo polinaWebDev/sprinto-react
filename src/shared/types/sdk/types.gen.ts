@@ -32,6 +32,14 @@ export type UserRequestDto = {
   password: string
 }
 
+export type CreateWorkspaceDto = {
+  name: string
+}
+
+export type UpdateWorkspaceDto = {
+  [key: string]: unknown
+}
+
 export type AuthControllerRegisterData = {
   body: RegisterDto
   path?: never
@@ -160,6 +168,79 @@ export type UsersControllerUpdateData = {
 }
 
 export type UsersControllerUpdateResponses = {
+  200: unknown
+}
+
+export type WorkspaceControllerFindAllData = {
+  body?: never
+  path?: never
+  query?: never
+  url: '/workspace'
+}
+
+export type WorkspaceControllerFindAllResponses = {
+  200: unknown
+}
+
+export type WorkspaceControllerCreateData = {
+  body: CreateWorkspaceDto
+  path?: never
+  query?: never
+  url: '/workspace'
+}
+
+export type WorkspaceControllerCreateResponses = {
+  /**
+   * Workspace created successfully
+   */
+  200: unknown
+}
+
+export type WorkspaceControllerRemoveData = {
+  body?: never
+  path: {
+    /**
+     * ID workspace
+     */
+    id: number
+  }
+  query?: never
+  url: '/workspace/{id}'
+}
+
+export type WorkspaceControllerRemoveResponses = {
+  200: unknown
+}
+
+export type WorkspaceControllerFindOneData = {
+  body?: never
+  path: {
+    /**
+     * ID workspace
+     */
+    id: number
+  }
+  query?: never
+  url: '/workspace/{id}'
+}
+
+export type WorkspaceControllerFindOneResponses = {
+  200: unknown
+}
+
+export type WorkspaceControllerUpdateData = {
+  body: UpdateWorkspaceDto
+  path: {
+    /**
+     * ID workspace
+     */
+    id: number
+  }
+  query?: never
+  url: '/workspace/{id}'
+}
+
+export type WorkspaceControllerUpdateResponses = {
   200: unknown
 }
 
