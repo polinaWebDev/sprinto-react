@@ -1,7 +1,7 @@
 import { Input } from '@/shared/ui/atoms/input'
 import { Label } from '@/shared/ui/atoms/label'
 import { FormControl, FormField, FormItem, FormMessage } from '../atoms/form'
-import type { FieldConfig } from '@/shared/types/types.ts'
+import type { FieldConfig } from '@/shared/api/generated/types.ts'
 
 interface FormInputProps {
   field: FieldConfig

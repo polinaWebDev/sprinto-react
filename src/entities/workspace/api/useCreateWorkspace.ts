@@ -1,5 +1,5 @@
 import { useMutation } from '@tanstack/react-query'
-import { workspaceControllerCreateMutation } from '@/shared/types/sdk/@tanstack/react-query.gen.ts'
+import {workspaceControllerCreateMutation} from "@/shared/api";
 
 export const useCreateWorkspace = () => {
   return useMutation({

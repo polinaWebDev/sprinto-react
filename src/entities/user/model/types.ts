@@ -1,4 +1,5 @@
-import type { UserResponse } from '@/shared/types/sdk'
+import type {UserResponse} from "@/shared/api";
+
 
 export interface User extends UserResponse {
   readonly fullName: string

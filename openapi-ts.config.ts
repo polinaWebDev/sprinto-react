@@ -5,7 +5,7 @@ console.log('Config loaded')
 export default defineConfig({
   input: 'http://localhost:3000/api-json',
   output: {
-    path: 'src/shared/types/sdk',
+    path: 'src/shared/api/generated',
   },
   plugins: [
     {

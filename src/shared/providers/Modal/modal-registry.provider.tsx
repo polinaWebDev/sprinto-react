@@ -1,6 +1,6 @@
-import { FormModal } from '@/shared/ui/organism/FormModal.tsx'
+import { FormModal } from '@/shared/ui/organism/Form/FormModal.tsx'
 import { useCreateWorkspace } from '@/entities/workspace/api/useCreateWorkspace.ts'
-import type { CreateWorkspaceDto } from '@/shared/types/sdk'
+import type { CreateWorkspaceDto } from '@/shared/api/generated/sdk'
 
 export const modalRegistry = {
   addTeam: (props: { onClose: () => void }) => {

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
 // Import the generated route tree
-import { routeTree } from './shared/helpers/routeTree.gen.ts'
+import { routeTree } from '@/shared/lib/helpers/routeTree.gen.ts'
 
 import './styles.css'
-import reportWebVitals from './shared/helpers/reportWebVitals.ts'
+import reportWebVitals from '@/shared/lib/helpers/reportWebVitals.ts'
 
 // Create a new router instance
 const router = createRouter({

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import type { JSX } from 'react'
-import { cn } from '@/shared/utils/shadcn-util'
+import { cn } from '@/shared/lib/utils/shadcn-util'
 
 const createComponent = <T extends HTMLElement>(
   tag: keyof JSX.IntrinsicElements,
