@@ -1,18 +1,14 @@
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from '@/shared/ui/molecules/sidebar.tsx'
-import { AppSidebar } from '@/features/ui/app-sidebar.tsx'
-import { Separator } from '@/shared/ui/atoms/separator.tsx'
+
+import {AppSidebar} from "@/shared/ui/organism/Navigation/app-sidebar.tsx";
+import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/shared/ui/molecules/sidebar.tsx";
+import {Separator} from "@/shared/ui/atoms/separator.tsx";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/shared/ui/atoms/breadcrumb.tsx'
+  BreadcrumbList, BreadcrumbPage,
+  BreadcrumbSeparator
+} from "@/shared/ui/atoms/breadcrumb.tsx";
 
 export default function Dashboard() {
   return (

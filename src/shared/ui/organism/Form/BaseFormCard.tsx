@@ -27,13 +27,12 @@ export function BaseFormCard<T extends FieldValues>({
 }: BaseFormCardProps<T>) {
   return (
     <Card className={`${className ?? ''}`}>
-      {title ||
-        (description && (
+      {(title || description) && (
           <CardHeader>
-            <CardTitle>{title}</CardTitle>
+            {title && <CardTitle>{title}</CardTitle>}
             {description && <CardDescription>{description}</CardDescription>}
           </CardHeader>
-        ))}
+      )}
       <CardContent>
         <FormProvider {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

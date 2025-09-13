@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import {
   AudioWaveform,
@@ -12,11 +11,6 @@ import {
   Settings2,
   SquareTerminal,
 } from 'lucide-react'
-
-import { NavMain } from '@/features/ui/nav-main'
-import { NavProjects } from '@/features/ui/nav-projects'
-import { NavUser } from '@/features/ui/nav-user'
-import { TeamSwitcher } from '@/features/ui/team-switcher'
 import {
   Sidebar,
   SidebarContent,
@@ -24,6 +18,10 @@ import {
   SidebarHeader,
   SidebarRail,
 } from '@/shared/ui/molecules/sidebar.tsx'
+import {TeamSwitcher} from "@/shared/ui/organism/team-switcher.tsx";
+import {NavMain} from "@/shared/ui/organism/Navigation/nav-main.tsx";
+import {NavProjects} from "@/shared/ui/organism/Navigation/nav-projects.tsx";
+import {NavUser} from "@/shared/ui/organism/Navigation/nav-user.tsx";
 
 // This is sample data.
 const data = {

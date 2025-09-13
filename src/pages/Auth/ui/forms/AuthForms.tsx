@@ -1,9 +1,8 @@
 import { Input } from '@/shared/ui/atoms/input.tsx'
 import { Label } from '@/shared/ui/atoms/label.tsx'
 import { Link } from '@tanstack/react-router'
-import { OAUTH_PROVIDERS } from '@/pages/Auth/config/constants.ts'
+import {type FieldConfig, OAUTH_PROVIDERS} from '@/pages/Auth/config/constants.ts'
 import { useState } from 'react'
-import type { FieldConfig } from '@/shared/api/generated/types.ts'
 import { BaseFormCard } from '@/shared/ui/organism/Form/BaseFormCard.tsx'
 import {
   FormControl,
@@ -12,12 +11,13 @@ import {
   FormMessage,
 } from '@/shared/ui/atoms/form.tsx'
 import { Button } from '@/shared/ui/atoms/button.tsx'
+import type { UseFormReturn} from "react-hook-form";
 
 interface AuthFormProps {
   title: string
   description: string
   fields: FieldConfig[]
-  form: any
+  form: UseFormReturn<any>,
   onSubmit: (data: any) => void
   isLoading?: boolean
   showOAuth?: boolean

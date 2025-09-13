@@ -9,7 +9,12 @@ import {
   serializePrimitiveParam,
 } from '../core/pathSerializer.gen.ts'
 import { getUrl } from '../core/utils.gen.ts'
-import type { Client, ClientOptions, Config, RequestOptions } from './types.gen.ts'
+import type {
+  Client,
+  ClientOptions,
+  Config,
+  RequestOptions,
+} from './types.gen.ts'
 
 export const createQuerySerializer = <T = unknown>({
   allowReserved,

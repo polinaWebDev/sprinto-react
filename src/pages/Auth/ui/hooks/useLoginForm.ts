@@ -1,7 +1,10 @@
-import { useForm } from 'react-hook-form'
+import { useForm} from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import {useLoginController} from "@/pages/Auth/model/useLoginController.ts";
-import {type LoginFormValues, zAuthControllerLoginData} from "@/pages/Auth/model/validators.ts";
+import { useLoginController } from '@/pages/Auth/model/useLoginController.ts'
+import {
+  type LoginFormValues,
+  zAuthControllerLoginData,
+} from '@/pages/Auth/model/validators.ts'
 
 export const useLoginForm = () => {
   const { login, isLoading } = useLoginController()

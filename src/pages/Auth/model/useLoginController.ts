@@ -1,7 +1,7 @@
 import { toast } from 'sonner'
 import { useNavigate } from '@tanstack/react-router'
-import {useLoginModel} from "@/pages/Auth/model/useLogin.ts";
-import type {User} from "@/entities/user";
+import { useLoginModel } from '@/pages/Auth/model/useLogin.ts'
+import type { User } from '@/entities/user'
 
 export const useLoginController = () => {
   const navigate = useNavigate()

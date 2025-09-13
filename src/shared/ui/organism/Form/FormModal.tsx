@@ -2,7 +2,7 @@ import { type FieldValues, useForm } from 'react-hook-form'
 import { BaseFormCard } from './BaseFormCard.tsx'
 import { Modal } from '../Modal.tsx'
 import { FormInput } from '@/shared/ui/molecules/FormInput.tsx'
-import type { FieldConfig } from '@/shared/api/generated/types.ts'
+import type {FieldConfig} from "@/pages/Auth/config/constants.ts";
 
 interface FormModalProps<T extends FieldValues> {
   modalTitle: string

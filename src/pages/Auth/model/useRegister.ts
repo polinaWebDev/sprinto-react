@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { authControllerRegisterMutation } from '../api'
-import {transformUserResponse, type User} from "@/entities/user";
+import { transformUserResponse, type User } from '@/entities/user'
 
 export interface UseRegisterModelOptions {
   onSuccess?: (result: { user: User }) => void

@@ -1,5 +1,5 @@
 import type { User } from '@/entities/user/model/types.ts'
-import type {UserResponse} from "@/shared/api";
+import type { UserResponse } from '@/shared/api'
 
 export const transformUserResponse = (response: UserResponse): User => ({
   ...response,

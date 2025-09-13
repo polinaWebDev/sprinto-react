@@ -1,6 +1,6 @@
 import { useLoginForm } from '@/pages/Auth/ui/hooks/useLoginForm.ts'
-import { loginFields } from '@/shared/api/generated/types.ts'
-import { AuthForm } from '@/features/auth'
+import {loginFields} from "@/pages/Auth/config/constants.ts";
+import {AuthForm} from "@/pages/Auth/ui";
 
 export function LoginForm() {
   const { form, onSubmit, isLoading } = useLoginForm()

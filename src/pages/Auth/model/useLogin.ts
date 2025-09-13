@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { authControllerLoginMutation } from '../api'
-import {transformUserResponse, type User} from '@/entities/user'
+import { transformUserResponse, type User } from '@/entities/user'
 
 export interface UseLoginModelOptions {
   onSuccess?: (result: { user: User }) => void

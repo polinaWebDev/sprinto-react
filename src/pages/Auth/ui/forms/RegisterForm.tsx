@@ -1,6 +1,6 @@
-import { useRegisterForm } from '@/pages/Auth/ui/hooks/useRegisterForm.ts'
-import { registerFields } from '@/shared/api/generated/types.ts'
-import { AuthForm } from '@/features/auth'
+import {AuthForm, useRegisterForm} from "@/pages/Auth/ui";
+import {registerFields} from "@/pages/Auth/config/constants.ts";
+
 
 export function RegisterForm() {
   const { form, onSubmit, isLoading } = useRegisterForm()
